@@ -5,8 +5,8 @@ import java.util.Locale;
 
 /** Interface language only. Never changes the speech or subtitle language. */
 final class AppLanguage {
-    static final String[] TAGS={"", "en", "zh-Hans", "es", "fr", "de", "pt", "ru", "ja", "ko", "ar"};
-    static final String[] NAMES={"", "English", "简体中文", "Español", "Français", "Deutsch", "Português", "Русский", "日本語", "한국어", "العربية"};
+    static final String[] TAGS={"", "en", "zh-Hans", "es", "fr", "de", "pt", "ru", "ja", "ko", "ar", "fa"};
+    static final String[] NAMES={"", "English", "简体中文", "Español", "Français", "Deutsch", "Português", "Русский", "日本語", "한국어", "العربية", "فارسی"};
     static int index(String tags){
         if(tags==null||tags.isEmpty())return 0;
         String code=Locale.forLanguageTag(tags.split(",")[0]).getLanguage();
