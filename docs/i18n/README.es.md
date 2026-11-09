@@ -1,0 +1,42 @@
+# Instant Caption · Interpretación simultánea con IA gratuita
+
+[English](../../README.md) · [简体中文](../../README.zh-CN.md) · [Español](README.es.md) · [Français](README.fr.md) · [Deutsch](README.de.md) · [Português](README.pt.md) · [Русский](README.ru.md) · [日本語](README.ja.md) · [한국어](README.ko.md) · [العربية](README.ar.md)
+
+## Traductor sin conexión para Android · Subtítulos en tiempo real · Baja latencia
+
+Instant Caption es una aplicación gratuita y de código abierto de traducción de voz e interpretación simultánea con IA para Android. Ofrece subtítulos en tiempo real y subtítulos flotantes mediante modelos de lenguaje grandes (LLM) que se ejecutan en tu teléfono. Tras descargar los modelos, el reconocimiento de voz y la traducción funcionan sin conexión. Traduce el micrófono o el audio de vídeos y aplicaciones compatibles con baja latencia. Sin suscripción, clave de API de traducción en la nube ni dependencia de Google Play Services. Las donaciones son voluntarias.
+
+[**Descargar APK**](https://github.com/zmxhot/InstantCaption/releases/tag/v1.20.1-beta.1)
+
+> Beta pública para Android 10+ y ARM64. El APK firmado disponible utiliza modelos de CPU. El código incluye integración NPU, pero el APK NPU completo aún no se publica: quedan detalles de licencias de dependencias binarias por aclarar. [Estado de distribución](../NPU-DISTRIBUTION.md).
+
+### Funciones
+
+- Reconocimiento de voz y traducción local después de descargar los modelos; no requiere Google Play Services.
+- HY-MT2-1.8B para traducción multilingüe directa, o rutas OPUS-MT más pequeñas. Qwen/Gemma para NPU en la integración completa compatible.
+- Micrófono o audio de aplicaciones que permitan la captura de Android.
+- Subtítulos flotantes que se arrastran y ocultan en un borde; tamaño, transparencia, altura y texto original configurables.
+- Listas independientes de modelos de voz y traducción, con descargas reanudables, importación y comprobación de integridad.
+- Diez idiomas de interfaz; los idiomas de voz y destino dependen del modelo.
+
+### Capturas de pantalla
+
+<p>
+  <img src="../assets/screenshots/es/main.png" width="45%" alt="Pantalla principal en español" />
+  <img src="../assets/screenshots/es/caption-style.png" width="45%" alt="Ajustes de subtítulos flotantes en español" />
+</p>
+
+*Interfaz en español, capturada en un Galaxy S25+ con la versión NPU de desarrollo. La vista previa muestra la traducción y el texto original en inglés. El APK público utiliza modelos de CPU.*
+
+### Primer uso
+
+1. Descarga e instala `instant-caption-1.20.1-beta.1-portable-release.apk`. No necesitas compilar.
+2. Elige los idiomas de origen y destino. Descarga los modelos recomendados por Wi-Fi.
+3. Para traducción directa con un modelo de lenguaje, elige HY-MT2-1.8B si el dispositivo lo permite: unos 1,13 GB, más el modelo de voz; se prefieren 6 GB de RAM o más.
+4. Ejecuta la comprobación local, elige micrófono o audio del dispositivo y concede el permiso correspondiente. Después de preparar los modelos puedes trabajar sin conexión.
+
+La baja latencia depende del teléfono, modelo y temperatura. Las mediciones NPU del README inglés no describen el APK CPU. La traducción puede contener errores. El modo de audio usa el permiso de compartir pantalla de Android para obtener audio, sin capturar imágenes ni vídeo; las llamadas y el contenido protegido pueden quedar excluidos.
+
+[Compatibilidad](../COMPATIBILITY.md) · [Privacidad](../../PRIVACY.md) · [Compilar](../BUILD.md) · [Problemas](https://github.com/zmxhot/InstantCaption/issues) · [Donar voluntariamente](../SUPPORT.md)
+
+Código de la aplicación: Apache-2.0. Los modelos y bibliotecas conservan sus propias licencias y restricciones. Ninguna función requiere una donación.
