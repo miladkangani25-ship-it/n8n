@@ -73,10 +73,17 @@ public final class OfflineTextToSpeech implements AutoCloseable {
     }
 
     public boolean isReady() { return ready; }
+
+    /** Returns true only for the two offline conversation languages. */
+    public static boolean supportsLanguage(String languageTag) { return localeFor(languageTag) != null; }
     public Locale selectedLocale() { return locale; }
 
     /** Queues text only after an offline voice has been selected. */
     public synchronized boolean speak(String text, String utteranceId) {
+        if (utteranceId == null || utteranceId.trim().isEmpty()) {
+            callback.onError(utteranceId, "utterance-id-required");
+            return false;
+        }
         if (!ready || text == null || text.trim().isEmpty()) {
             callback.onError(utteranceId, "offline-voice-not-ready");
             return false;
