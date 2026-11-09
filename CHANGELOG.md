@@ -1,5 +1,14 @@
 # Changelog
 
+## 0.2.0 — 2026-11-09
+
+- Establish the offline Persian/Russian caption translator release line.
+- Add local speech recognition, direct multilingual text translation, and Android text-to-speech routing without cloud fallback.
+- Add Persian language routing and coverage checks for Persian ↔ Russian paths.
+- Refresh the app UI to a light theme with readable status/navigation bars and floating captions.
+- Keep model weights, runtime caches, signing material, and generated build outputs outside Git; retain only the small bundled VAD asset and metadata/licenses.
+
+
 ## 1.20.1-beta.1 — 2026-10-18
 
 - Preserve artifact-bound QNN/LiteRT license files and full third-party notices, with hashes and APK verification; long notices are readable in pages.

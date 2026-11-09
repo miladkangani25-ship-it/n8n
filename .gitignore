@@ -22,3 +22,12 @@ app/src/androidTest/assets/
 test-results/
 
 .venv-translation/
+# Large model weights and generated runtime artifacts stay out of Git.
+*.bin
+*.safetensors
+*.tflite
+*.pt
+*.pth
+*.onnx
+# Keep the small, required voice-activity detector bundled in the APK.
+!app/src/main/assets/silero-vad-v6.2.onnx
