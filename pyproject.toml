@@ -1,0 +1,16 @@
+[project]
+name = "offline-translator"
+version = "0.1.0"
+description = "Offline Persian-Russian speech translation pipeline"
+requires-python = ">=3.11"
+dependencies = []
+
+[project.optional-dependencies]
+api = ["fastapi>=0.115", "uvicorn[standard]>=0.34"]
+dev = ["pytest>=8.0", "ruff>=0.9"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+
+[tool.ruff]
+line-length = 100
